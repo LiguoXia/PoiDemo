@@ -8,7 +8,7 @@ public class FilePath {
 		System.out.println(ClassLoader.getSystemResource(""));
 		System.out.println(FilePath.class.getResource(""));
 		System.out.println(FilePath.class.getSimpleName());
-		System.out.println(FilePath.class.getResource("/")); // Class�ļ�����·��
+		System.out.println(FilePath.class.getResource("/")); 
 		System.out.println(new File("/").getAbsolutePath());
 		System.out.println(System.getProperty("user.dir"));
 	}

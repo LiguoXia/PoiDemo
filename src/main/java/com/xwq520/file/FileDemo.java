@@ -23,11 +23,7 @@ public class FileDemo {
 		}
 	}
 
-	/**
-	 * TODO ��ȡ�̷�·�����ļ���
-	 * 
-	 * @param path
-	 */
+	
 	public static void getFileNameInfo(String path) {
 		File file = new File(path);
 		String[] str = file.list();
@@ -37,26 +33,26 @@ public class FileDemo {
 	}
 
 	public static void creatFile() {
-		File file = new File("aa.txt");// �ļ�Ĭ�Ͼʹ������㴴������Ŀ���棬ˢ�¼��ɿ���
-		System.out.println(file.exists());// �ж��ļ��Ƿ����
+		File file = new File("aa.txt");
+		System.out.println(file.exists());
 		try {
 			file.createNewFile();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}// �����ļ��������ļ���
-		System.out.println(file.exists());// �ٴ��ж��Ƿ����
-		System.out.println(file.getName());// ��ȡ�ļ�������
-		System.out.println(file.getAbsolutePath());// ��ȡ�ļ��ľ���·��
-		System.out.println(file.getPath());// ��ȡ�ļ������·��
-		System.out.println(file.getParent());// ��ȡ�ļ��ĸ�·��
-		System.out.println(file.canRead());// �ļ��Ƿ�ɶ�
-		System.out.println(file.canWrite());// �ļ��Ƿ��д
-		System.out.println(file.length());// �ļ��ĳ���
-		System.out.println(file.lastModified());// �ļ����һ���޸ĵ�ʱ��
-		System.out.println(file.isDirectory());// �ж��ļ��Ƿ���һ��Ŀ¼
-		System.out.println(file.isHidden());// �ļ��Ƿ�����
-		System.out.println(file.isFile());// �ж��ļ��Ƿ����
+		}
+		System.out.println(file.exists());
+		System.out.println(file.getName());
+		System.out.println(file.getAbsolutePath());
+		System.out.println(file.getPath());
+		System.out.println(file.getParent());
+		System.out.println(file.canRead());
+		System.out.println(file.canWrite());
+		System.out.println(file.length());
+		System.out.println(file.lastModified());
+		System.out.println(file.isDirectory());
+		System.out.println(file.isHidden());
+		System.out.println(file.isFile());
 	}
 	public static void readAndWrite() throws IOException{
 		String path = "D:\\eclipse-oxygen-workspace\\HelloWorld\\aa.txt";
@@ -68,7 +64,7 @@ public class FileDemo {
         // write
         FileWriter fw = new FileWriter(file, true);
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.write("bbbbbbhahaha������2Ŷ1");
+        bw.write("bbbbbbhah");
         bw.flush();
         bw.close();
         fw.close();
