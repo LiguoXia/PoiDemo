@@ -2,6 +2,8 @@ package com.java1234.service;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.log4j.Logger;
 import org.junit.After;
@@ -48,10 +50,29 @@ public class StudentTest2 {
 	}
 	@Test
 	public void testUpdate() {
-		log.info("更需学生");
-		Student student=new Student(3, "sss", 18);
+		log.info("更新学生");
+		Student student=new Student(3, "刘迪光", 18);
 		studentMapper.update(student);
 		sqlSession.commit();
 	}
-
+	@Test
+	public void testDelete() {
+		log.info("删除学生");
+		studentMapper.delete(6);
+		sqlSession.commit();
+	}
+	@Test
+	public void testFindById() {
+		log.info("通过id查找学生");
+		Student student = studentMapper.findById(3);
+		System.out.println(student.toString());
+	}
+	@Test
+	public void testFind() {
+		log.info("通过id查找学生");
+		List<Student> stuList = studentMapper.find();
+		for (Student student : stuList) {
+			System.out.println(student);
+		}
+	}
 }
