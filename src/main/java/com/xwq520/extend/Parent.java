@@ -9,7 +9,7 @@ public class Parent {
 		this.c = c;
 		this.d = d;
 	}
-	Parent(){
+	public Parent(){
 	}
 	public int a = 1;
 	private int b = 2;  //当前类内部可访问
