@@ -34,7 +34,7 @@ public class BasicContainer {
 
 }
 
-class Name implements Comparable {
+class Name implements Comparable<Name> {
 	private String firstName, lastName;
 
 	public Name(String firstName, String lastName) {
@@ -54,7 +54,7 @@ class Name implements Comparable {
 		return firstName + " " + lastName;
 	}
 
-	public boolean equals(Object obj) {
+	public boolean equals(Name obj) {
 		if (obj instanceof Name) {
 			Name name = (Name) obj;
 			return (firstName.equals(name.firstName)) && (lastName.equals(name.lastName));
@@ -66,7 +66,7 @@ class Name implements Comparable {
 		return firstName.hashCode();
 	}
 
-	public int compareTo(Object o) {
+	public int compareTo(Name o) {
 		Name n = (Name) o;
 		int lastCmp = lastName.compareTo(n.lastName);
 		return (lastCmp != 0 ? lastCmp : firstName.compareTo(n.firstName));
