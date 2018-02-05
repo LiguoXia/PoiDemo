@@ -1,16 +1,14 @@
 package com.xwq520.date;
-import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 public class DateTest {
 	public static void main(String[] args) throws Exception {
 		String aa = "20171211";
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 		Date date = sdf.parse(aa);
+		System.out.println(date);
 	}
 
 	public static void test() throws Exception {
